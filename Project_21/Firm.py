@@ -11,8 +11,15 @@ def fetch():
     return data["on"]
 
 board=fir.Arduino('COM3')
-it = fir.util.Iterator(board)  
-fetch()
+it = fir.util.Iterator(board)
+print("Checking Internet Access.......")
+try:
+    fetch()
+except:
+    print("No Internet Access\nConnect to Internet :(")
+    sleep(5)
+    exit()
+print("Internet Access : Good :)")
 
 ##VARS
 volt=0.0
