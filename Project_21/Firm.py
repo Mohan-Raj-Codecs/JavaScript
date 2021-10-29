@@ -26,7 +26,7 @@ except:
     print("No Internet Access\nConnect to Internet :(")
     sleep(5)
     exit()
-print("Internet Check.............Connected)
+print("Internet Check.............Connected")
 
 ##VARS
 volt=0.0
