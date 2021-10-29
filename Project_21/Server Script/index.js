@@ -2,11 +2,11 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 const cors = require('cors')
-const port = 80;
-
+const port = 8080;
 
 
 var oni=false;
+/*
 try {
 var jsonString = fs.readFileSync("./data.json");
 var data = JSON.parse(jsonString);
@@ -15,6 +15,7 @@ var data = JSON.parse(jsonString);
     return;
   }
 oni=data.on;
+*/
 var fileName="./data.json";
 var on_data='{"on":true}';
 var off_data='{"on":false}';
@@ -50,6 +51,7 @@ app.post('/',(req,res)=>{
 
 
 app.listen(port,()=>{
-    console.log("Server is listening at port 80")
+    console.log("Server is listening at port 8080")
+    console.log("Test Server")
 })
 app.use(express.static('./'))
