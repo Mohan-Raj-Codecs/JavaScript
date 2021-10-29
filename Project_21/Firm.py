@@ -10,16 +10,23 @@ def fetch():
     data = json.loads(urlopen(url).read())
     return data["on"]
 
-board=fir.Arduino('COM3')
-it = fir.util.Iterator(board)
-print("Checking Internet Access.......")
+print("Detecting Arduino")
+try:
+    board=fir.Arduino('COM3')
+    it = fir.util.Iterator(board)
+except:
+    print("Arduino is Not Connected :(")
+    sleep(5)
+    exit()
+print("Arduino Check..............Connected")
+print("Checking Internet Access")
 try:
     fetch()
 except:
     print("No Internet Access\nConnect to Internet :(")
     sleep(5)
     exit()
-print("Internet Access : Good :)")
+print("Internet Check.............Connected)
 
 ##VARS
 volt=0.0
