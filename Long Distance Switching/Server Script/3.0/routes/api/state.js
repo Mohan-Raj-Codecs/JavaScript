@@ -5,11 +5,19 @@ var router = express.Router();
 
 var fileName="public/data.json";
 
-var jsonString = fs.readFileSync(fileName);
-var data = JSON.parse(jsonString);
+function fetch_data(){  //Fetch Live data from File
+	try{
+	var jsonString = fs.readFileSync(fileName);
+	var data = JSON.parse(jsonString);
+	} catch(err){
+		console.log(err);
+		data="error";
+	  }
+	return data
+}
 
 router.get("/data",function(req,res){
-	res.send(data);
+	res.send(fetch_data());
 });
 
 module.exports = router;
