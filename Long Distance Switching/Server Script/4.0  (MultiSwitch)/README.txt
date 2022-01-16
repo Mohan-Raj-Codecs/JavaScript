@@ -1,11 +1,11 @@
 MULTISWITCH
 
-#This Version Bring MultiSwitch Features,
-which switches multiple switches at same page
+# This Version Bring MultiSwitch Features,
+  which switches multiple switches at same page
 
-#Handled Some Errors 404,
+# Handled Some Errors 404,
 
-#Offline and Online Detection and Offline Animation
+# Offline and Online Detection and Offline Animation
 
 Just Some Optimization and Builded it in More Official Way :)
 
