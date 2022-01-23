@@ -138,8 +138,8 @@ router.post('/switch',function(req,res){
         data.on2=str_to_bool(req.body.on2,inv=true);}
     json_dump(data);
     
-    console.log(data);
-    console.log("The End");
+    //console.log(data);
+    //console.log("The End");
 
     res.render("Switch",{data:data});
 
