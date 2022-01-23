@@ -4,7 +4,8 @@
   "description": "Umm...\r This Version Doesn't Bring any new Features,\r Just Some Optimization and Builded it in a Official Way :)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
