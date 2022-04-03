@@ -1,4 +1,0 @@
-pyFirmata
-requests
-urllib3
-pyserial
