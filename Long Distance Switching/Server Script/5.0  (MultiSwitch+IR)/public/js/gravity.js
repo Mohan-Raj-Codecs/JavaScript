@@ -39,6 +39,8 @@ var gravity = { x: 0, y: 1 };
 //Nippy#2677 START
 const url = "https://jsonplaceholder.typicode.com/todos/1";
 const data_url = "http://localhost/api/data";
+const update_frequency = 0.5;
+
 var loaded_offline=false;
 var isOnline=true;
 //class="box2d"
@@ -112,7 +114,7 @@ setInterval(async () =>{
             window.top.location.reload(true);
         }
     }
-}, 3000);
+}, update_frequency*1000);
 //Nippy#2677 END
 
 if (location.search != "") {
