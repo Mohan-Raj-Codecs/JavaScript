@@ -79,7 +79,9 @@ var sync_switch = async () => {
 
     let j=0;
     for(let i=0;i<Object.keys(datums).length;i++){
-      document.getElementById(Object.keys(datums)[j]).innerHTML = datums[Object.keys(datums)[j]] ? '<img src="green.jpg">' : '<img src="red.jpg">';
+      var ele = document.getElementById(Object.keys(datums)[j]);
+      ele.innerHTML = datums[Object.keys(datums)[j]] ? '<img src="green.jpg">' : '<img src="red.jpg">';
+      ele.value = datums[Object.keys(datums)[j]];
       j++;
     }
   }
