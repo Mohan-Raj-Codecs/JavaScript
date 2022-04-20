@@ -38,6 +38,7 @@ var gravity = { x: 0, y: 1 };
 
 //Nippy#2677 START
 const url = "https://jsonplaceholder.typicode.com/todos/1";
+const data_url = "http://localhost/api/data";
 var loaded_offline=false;
 var isOnline=true;
 //class="box2d"
@@ -67,6 +68,24 @@ function load_offline(){
     init();
 }
 
+var sync_switch = async () => {
+  try{
+    var datum = await fetch(data_url);
+    var datums = await datum.json();
+
+    console.log(datums);
+
+    let j=0;
+    for(let i=0;i<Object.keys(datums).length;i++){
+      document.getElementById(Object.keys(datums)[j]).innerHTML = datums[Object.keys(datums)[j]] ? '<img src="green.jpg">' : '<img src="red.jpg">';
+      j++;
+    }
+  }
+  catch(err){
+   console.log("Errrrrrrr in Fetching On Data(Check API)");
+  }
+}
+
 var checkOnlineStatus = async () => {
     try{
         const online = await fetch(url);
@@ -79,6 +98,7 @@ var checkOnlineStatus = async () => {
 setInterval(async () =>{
     isOnline = await checkOnlineStatus();
     console.log(isOnline);
+    sync_switch();
     if(!isOnline){
         if(!loaded_offline){
           load_offline();
