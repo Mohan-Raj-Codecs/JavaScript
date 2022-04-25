@@ -10,8 +10,8 @@ MULTISWITCH
 Just Some Optimization and Builded it in More Official Way :)
 
 npm requirements :
-sudo npm install fs express path ejs body-parser cors --save
-npm fund
+<code>sudo npm install fs express path ejs body-parser cors --save
+npm fund</code>
 
 
 !!Paired ESP32 Code : Version 4.0!!
