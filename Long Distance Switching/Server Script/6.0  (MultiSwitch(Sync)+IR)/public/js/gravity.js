@@ -38,7 +38,7 @@ var gravity = { x: 0, y: 1 };
 
 //Nippy#2677 START
 const url = "https://jsonplaceholder.typicode.com/todos/1";
-const data_url = "http://localhost/api/data";
+const data_url = "http://3.109.186.163/api/data";
 const update_frequency = 0.5;
 
 var loaded_offline=false;
