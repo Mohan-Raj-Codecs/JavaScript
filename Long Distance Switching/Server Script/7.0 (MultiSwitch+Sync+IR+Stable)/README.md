@@ -16,3 +16,6 @@ npm fund
 ```
 
 Paired ESP32 Code : Version 4.0
+
+# Issues
+- Will Swing Switch States if your Internet is Not Stable (will fix in next Version)
