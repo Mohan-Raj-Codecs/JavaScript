@@ -7,15 +7,15 @@ MULTISWITCH
 
 - Offline and Online Detection and Offline Animation
 
-- Just Some Optimization and Builded it in More Official Way :)
+- Just Some Optimization and Built it in More Official Way :)
 
 # npm requirements :
 ```
-sudo npm install fs express path ejs body-parser cors --save
+sudo npm install fs express path EJS body-parser cors --save
 npm fund
 ```
 
-Paired ESP32 Code : Version 4.0
+Paired ESP32 Code: Version 4.0
 
 # Issues
 - Will Swing Switch States if your Internet is Not Stable (will fix in next Version)
