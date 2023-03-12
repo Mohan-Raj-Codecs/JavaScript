@@ -17,7 +17,7 @@ MULTISWITCH
 
 # npm requirements :
 ```
-sudo npm install fs express path EJS body-parser cors --save
+sudo npm install fs express path ejs body-parser cors --save
 npm fund
 ```
 
